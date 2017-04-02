@@ -2,18 +2,19 @@
 
 import * as debug from 'debug';
 import * as nconf from 'nconf';
+import * as path from 'path';
 import * as Telegraf from 'telegraf';
 
-import { createCommand } from './lib/create-command';
-import { Start } from './lib/commands/start';
-import { Hey } from './lib/commands/hey';
+import { createCommand } from './create-command';
+import { Start } from './commands/start';
+import { Hey } from './commands/hey';
 
 const D: debug.IDebugger = debug('app');
 
 nconf
 	.argv()
 	.env()
-	.file({ file: 'config.json' });
+	.file({ file: path.join(__dirname, 'config.json') });
 
 const bot: Telegraf = new Telegraf(nconf.get('token'));
 
