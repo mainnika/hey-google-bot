@@ -9,13 +9,15 @@
     "debug": "^2.6.3",
     "koa": "^2.2.0",
     "nconf": "^0.8.4",
-    "telegraf": "^3.6.7"
+    "telegraf": "^3.6.7",
+    "when": "^3.7.8"
   },
   "devDependencies": {
     "@types/debug": "0.0.29",
     "@types/koa": "^2.0.39",
     "@types/nconf": "0.0.34",
     "@types/telegraf": "github:mainnika/npm-telegraf",
+    "@types/when": "^2.4.28",
     "tslint": "^5.0.0",
     "typescript": "^2.2.2"
   }
