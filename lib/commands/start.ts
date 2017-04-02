@@ -16,7 +16,7 @@ class Start extends Command {
 		super(ctx);
 	}
 
-	public exec(): void {
+	public async exec(): Promise<void> {
 
 		D('let us greet %o', this.ctx.from.username);
 

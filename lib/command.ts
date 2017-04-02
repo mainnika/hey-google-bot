@@ -17,7 +17,7 @@ abstract class Command {
 		D('handle incoming message from %o', this.ctx.from.username);
 	}
 
-	public abstract exec(): void;
+	public abstract async exec(): Promise<void>;
 
 	private loadUser() {
 
